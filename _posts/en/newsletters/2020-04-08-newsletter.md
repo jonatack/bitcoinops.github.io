@@ -24,7 +24,55 @@ _In this section, we summarize a recent Bitcoin Core PR Review Club meeting,
 highlighting some of the important questions and answers.  Click on a
 question below to see a summary of the answer from the meeting._
 
-FIXME:jnewbery (write or delete section)
+**[Retry notfounds with more urgency][review club 18238]** is a PR
+([#18238][Bitcoin Core #18238]) by Anthony Towns that would change peer-to-peer
+behavior so that when nodes receive a NOTFOUND in response to a request for a
+transaction, they would skip the current time-out period and instead:
+
+1. look through their peers for any others that announced the transaction;
+
+2. select all that haven't exceeded the max in-flight transaction limit;
+
+3. of those, have the peer that would look at it first do so as soon as
+   possible.
+
+Discussion began with fundamental reasons for the PR:
+
+<div class="review-club-questions"></div>
+- <details><summary>Why could retrying NOTFOUNDs more quickly be helpful?</summary>
+  DoS prevention, transaction propagation speed, privacy, and future `mapRelay`
+  removal.</details>
+- <details><summary>What is a potential DoS attack concern?</summary>
+  Nodes with small mempools could force peers to wait a long time before
+  receiving a transaction.</details>
+- <details><summary>Why is transaction propagation speed important?</summary>
+  Short delays in seconds aren't an issue (and can even be desirable for
+  privacy), but larger delays in minutes can hurt propagation of transactions,
+  BIP152 relay, and even that of blocks.</details>
+- <details><summary>When and why was `mapRelay` originally added?</summary>
+  `mapRelay` was present in the first Bitcoin git commit to ensure a
+  transaction could be downloaded even if a block had already confirmed it.</details>
+- <details><summary>Why could removing `mapRelay` be desirable?</summary>
+  `mapRelay` has poor memory bounding, which leads to memory exhaustion issues
+   that have blocked progress.</details>
+- <details><summary>Describe one issue with removing `mapRelay`?</summary>
+  It could cause requested transactions in honest situations to more often be
+  NOTFOUND with delays of up to 2 minutes, hurting propagation.</details>
+
+Later in the meeting, the `TxDownloadState` data structure was discussed:
+
+<div class="review-club-questions"></div>
+- <details><summary>Describe the role of the `TxDownloadState` struct?</summary>
+    A per-peer state machine, with timers, to coordinate requesting transactions
+    from peers.</details>
+- <details><summary>What are 3 `TxDownloadState` states a transaction can be in?</summary>
+  (1) announced, but not requested; (2) announced, requested, and waiting for
+  delivery; (3) announced, requested, but timed out.</details>
+
+Discussion then delved deeply into the PR implementation, potential issues, and
+future improvements and their timing with respect to the upcoming [wtxid
+transaction relay](https://bitcoincore.reviews/18044). Don't hesitate to read
+the study notes and meeting log at https://bitcoincore.reviews/18238 for more.
 
 ## Notable code and documentation changes
 

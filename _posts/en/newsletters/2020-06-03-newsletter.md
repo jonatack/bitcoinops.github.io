@@ -109,8 +109,7 @@ why Lightning backups are more complex than onchain backups, the
 prospects of getting SIGHASH_NOINPUT or ANYPREVOUT into Bitcoin Core to
 enable eltoo payment channels and the current modularity of the
 Lightning protocol.
-([transcript](https://diyhpl.us/wiki/transcripts/lightning-hack-day/2020-05-03-christian-decker-lightning-backups/),
-[video](https://www.youtube.com/watch?v=kGQF3wtzr04))
+([transcript][decker xs], [video][decker vid])
 
 - **Payjoin/P2EP:** Adam Gibson led a discussion at London BitDevs on Payjoin/P2EP in light
 of BTCPay Server recently implementing support for Payjoin/P2EP
@@ -123,8 +122,7 @@ Samourai before moving on to details of the recent BTCPay Server
 implementation. He ended by outlining the different ways a wallet can be
 fingerprinted including the threshold of signatures required, how
 timelocks are imposed and the RBF (replace-by-fee) flag.
-([transcript](https://diyhpl.us/wiki/transcripts/london-bitcoin-devs/2020-05-05-socratic-seminar-payjoins/),
-[video](https://www.youtube.com/watch?v=hX86rKyNB8I))
+([transcript][gibson xs], [video][gibson vid])
 
 - **LSAT—-Your Ticket Aboard The Lightning Native Web:** Oliver Gugger presented on LSAT (Lightning Service Authentication Token)
 at Reckless VR in virtual reality. LSAT is a protocol specification and
@@ -147,7 +145,7 @@ the Rust language should be introduced to Bitcoin Core and the exact
 mechanism that should be used to activate proposed soft forks such as
 BIP-Taproot in future. The transcript was anonymized to encourage an
 open and honest discussion.
-([transcript](https://diyhpl.us/wiki/transcripts/sydney-bitcoin-meetup/2020-05-19-socratic-seminar/))
+([transcript][sydney xs])
 
 - **Revault—A Multiparty Vault Architecture:** Kevin Loaec and Antoine Poinsot presented on their vault design Revault
 at London Bitcoin Devs. They outlined specific details like its reliance
@@ -161,11 +159,11 @@ Bitcoin Core makes resolving problems like transaction pinning so
 challenging. Transaction pinning and watchtower designs are highly
 relevant to the security of both vault designs and the Lightning
 protocol.  ([Meetup
-transcript](https://diyhpl.us/wiki/transcripts/london-bitcoin-devs/2020-05-19-socratic-seminar-vaults/),
+transcript][london xs],
 [Presentation
-transcript](https://diyhpl.us/wiki/transcripts/london-bitcoin-devs/2020-05-26-kevin-loaec-antoine-poinsot-revault/),
-[Meetup video](https://www.youtube.com/watch?v=34jMGiCAmQM),
-[Presentation video](https://www.youtube.com/watch?v=7CE4aiFxh10))
+transcript][revault xs],
+[Meetup video][london vid],
+[Presentation video][revault vid])
 
 ## Releases and release candidates
 
@@ -289,3 +287,14 @@ their work hours to contribute to Optech.
 [Alex Morcos]: https://twitter.com/morcosa
 [Chaincode Labs]: https://chaincode.com/
 [SquareCrypto]: https://twitter.com/sqcrypto
+[decker xs]: https://diyhpl.us/wiki/transcripts/lightning-hack-day/2020-05-03-christian-decker-lightning-backups/
+[decker vid]: https://www.youtube.com/watch?v=kGQF3wtzr04
+[gibson xs]: https://diyhpl.us/wiki/transcripts/london-bitcoin-devs/2020-05-05-socratic-seminar-payjoins/
+[gibson vid]: https://www.youtube.com/watch?v=hX86rKyNB8I
+[gugger xs]: https://diyhpl.us/wiki/transcripts/vr-bitcoin/2020-05-16-oliver-gugger-lsat/
+[gugger vid]: https://www.youtube.com/watch?v=IW08RJUpzw0
+[sydney xs]: https://diyhpl.us/wiki/transcripts/sydney-bitcoin-meetup/2020-05-19-socratic-seminar/
+[london xs]: https://diyhpl.us/wiki/transcripts/london-bitcoin-devs/2020-05-19-socratic-seminar-vaults/
+[revault xs]: https://diyhpl.us/wiki/transcripts/london-bitcoin-devs/2020-05-26-kevin-loaec-antoine-poinsot-revault/
+[london vid]: https://www.youtube.com/watch?v=34jMGiCAmQM
+[revault vid]: https://www.youtube.com/watch?v=7CE4aiFxh10

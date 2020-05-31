@@ -8,11 +8,13 @@ layout: newsletter
 lang: en
 ---
 This week's newsletter summarizes a proposed design for a coinswap
-implementation and links to two transaction size calculators.  Also
-included are our regular sections with descriptions of several recently
-transcribed talks, new releases and release candidates, and notable
-changes to popular Bitcoin infrastructure software.  A special final
-section celebrates the publication of Newsletter #100.
+implementation, describes new middleware for allowing lightweight
+wallets to get information directly from a user's own node, and links to
+two transaction size calculators.  Also included are our regular
+sections with descriptions of several recently transcribed talks, new
+releases and release candidates, and notable changes to popular Bitcoin
+infrastructure software.  A special final section celebrates the
+publication of Newsletter #100.
 
 ## Action items
 
@@ -57,6 +59,33 @@ section celebrates the publication of Newsletter #100.
     the conclusion of his email: "I intend to create this CoinSwap
     software.  It will be almost completely decentralized and available
     for all to use for free."
+
+- **New node-to-wallet middleware:** Nadav Ivgi [announced][ivgi bwt]
+  the alpha release of Bitcoin Wallet Tracker (BWT), a program that
+  interacts with Bitcoin Core's wallet using its standard RPC interface,
+  uses that data to build additional indexes necessary for lightweight
+  wallets, and then makes that data available via both the Electrum
+  Server protocol and BWT's own [extensive HTTP-based API][bwt api].
+  Similar to Electrum Personal Server, this allows users who prefer the
+  UI of a lightweight wallet (such as Electrum) to retrieve block and
+  transaction data from their own full verification node for additional
+  security.  There's no significant overhead to BWT's approach: its
+  additional indexes are stored only in memory and it can work with
+  pruned nodes in many cases, allowing a combined `bitcoind` and `bwt`
+  setup to use only a few gigabytes of disk space.
+
+    Ivgi also provides a [plugin][bwt plugin] that simplifies setting up
+    BWT with an Electrum client, and it may also be possible to use BWT
+    with other wallets that support the Electrum Server protocol, such
+    as [Edge][], [Blue Wallet][], [Eclair mobile][], and [Phoenix][].
+
+    BWT's HTTP protocol supports additional features beyond those
+    available in the Electrum Server protocol, such as key origin
+    information useful for interaction with HD wallets and wallet
+    collaboration tools such as [PSBT][topic psbt].  His email also
+    notes that future versions of BWT may support [output script
+    descriptors][topic descriptors], allowing wallets to produce and
+    consume standardized descriptions of their script templates.
 
 - **Transaction size calculators:** Jameson Lopp [posted][lopp size] to
   the Bitcoin-Dev mailing list with links to a [transaction size
@@ -176,6 +205,13 @@ their work hours to contribute to Optech.
 [lopp calc]: https://jlopp.github.io/bitcoin-transaction-size-calculator/
 [optech calc]: https://bitcoinops.org/en/tools/calc-size
 [about page]: /about/
+[ivgi bwt]: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2020-May/017906.html
+[bwt api]: https://github.com/shesek/bwt#http-api
+[bwt plugin]: https://github.com/shesek/bwt#electrum-plugin
+[edge]: https://edge.app/
+[blue wallet]: https://bluewallet.io/
+[eclair mobile]: https://github.com/ACINQ/eclair-mobile
+[phoenix]: https://phoenix.acinq.co/
 [Adam Jonas]: https://github.com/adamjonas
 [Carl Dong]: https://github.com/dongcarl
 [David A.  Harding]: https://github.com/harding

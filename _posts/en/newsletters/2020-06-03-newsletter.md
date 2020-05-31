@@ -106,12 +106,12 @@ Eclair and LND before explaining why C-Lightning is using a synchronous
 database log plugin approach to facilitate LN node backups. In
 the question and answer session afterwards he discussed his thoughts on
 why LN backups are more complex than onchain backups, the
-prospects of getting `SIGHASH_NOINPUT` or `SIGHASH_ANYPREVOUT` into Bitcoin Core to
-enable eltoo payment channels, and the current modularity of the
+prospects of getting [SIGHASH_NOINPUT][topic sighash_noinput] or `SIGHASH_ANYPREVOUT` into Bitcoin Core to
+enable [eltoo][topic eltoo] payment channels, and the current modularity of the
 LN protocol.
 ([transcript][decker xs], [video][decker vid])
 
-- **Payjoin/P2EP:** Adam Gibson led a discussion at London BitDevs on payjoin in light
+- **Payjoin/P2EP:** Adam Gibson led a discussion at London BitDevs on [payjoin][topic payjoin] in light
 of BTCPay Server recently implementing support for payjoin
 transactions. These transactions allow both the sender and receiver of
 the payment to coordinate to bolster their privacy by inserting
@@ -121,10 +121,10 @@ the concept, existing implementations of payjoin in JoinMarket and
 Samourai before moving on to details of the recent BTCPay Server
 implementation. He ended by outlining the different ways a wallet can be
 fingerprinted including the threshold of signatures required, how
-timelocks are imposed, and the Replace-By-Fee (RBF) flag.
+timelocks are imposed, and the Replace-By-Fee ([RBF][topic rbf]) flag.
 ([transcript][gibson xs], [video][gibson vid])
 
-- **LSAT—-Your Ticket Aboard The Lightning Native Web:** Oliver Gugger presented on Lightning Service Authentication Token (LSAT)
+- **LSAT-Your Ticket Aboard The Lightning Native Web:** Oliver Gugger presented on Lightning Service Authentication Token (LSAT)
 at Reckless VR in virtual reality. LSAT is a protocol specification and
 proposed new standard combining HTTP, macaroons, and Lightning. It is
 designed to address the HTTP 402 Payment Required error status response
@@ -143,7 +143,7 @@ modern soft fork activation. The history of Linux kernel development and
 segwit activation was explored to garner insights into when or whether
 the Rust language should be introduced to Bitcoin Core and the exact
 mechanism that should be used to activate proposed soft forks such as
-bip-taproot in future. The transcript was anonymized to encourage an
+[taproot][topic taproot] in future. The transcript was anonymized to encourage an
 open and honest discussion.
 ([transcript][sydney xs])
 
@@ -152,11 +152,11 @@ at London Bitcoin Devs. They outlined specific details like its reliance
 on co-signing servers and how it compares to some other vault designs
 that require knowledge of amounts ahead of time, key deletion, or both.
 Their presentation was preceded the week before by a wider discussion on
-vaults, covenants, and `OP_CHECKTEMPLATEVERIFY` (`OP_CTV`). This included the
+vaults, [covenants][topic covenants], and `OP_CHECKTEMPLATEVERIFY` (`OP_CTV`). This included the
 merits of the different use cases of `OP_CTV`, a possible path to being
 merged into Bitcoin Core, and how the current state of the mempool of
-Bitcoin Core makes resolving problems like transaction pinning so
-challenging. Transaction pinning and watchtower designs are highly
+Bitcoin Core makes resolving problems like [transaction pinning][topic transaction pinning] so
+challenging. Transaction pinning and [watchtower][topic watchtowers] designs are highly
 relevant to the security of both vault designs and the LN
 protocol.  ([Meetup
 transcript][london xs],

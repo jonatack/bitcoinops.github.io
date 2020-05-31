@@ -100,33 +100,33 @@ publication of Newsletter #100.
 Bitcoin presentations and discussions. In this monthly feature, we
 highlight a selection of the transcripts from the previous month.*
 
-- **Back the f\*\*\* up:** Christian Decker presented at Potzblitz on the latest state of Lightning
+- **Back the f\*\*\* up:** Christian Decker presented at Potzblitz on the latest state of LN
 backups. He discussed the approaches of other implementations such as
-eclair and lnd before explaining why c-lightning is using a synchronous
-database log plugin approach to facilitate Lightning node backups. In
+Eclair and LND before explaining why C-Lightning is using a synchronous
+database log plugin approach to facilitate LN node backups. In
 the question and answer session afterwards he discussed his thoughts on
-why Lightning backups are more complex than onchain backups, the
-prospects of getting SIGHASH_NOINPUT or ANYPREVOUT into Bitcoin Core to
-enable eltoo payment channels and the current modularity of the
-Lightning protocol.
+why LN backups are more complex than onchain backups, the
+prospects of getting `SIGHASH_NOINPUT` or `SIGHASH_ANYPREVOUT` into Bitcoin Core to
+enable eltoo payment channels, and the current modularity of the
+LN protocol.
 ([transcript][decker xs], [video][decker vid])
 
-- **Payjoin/P2EP:** Adam Gibson led a discussion at London BitDevs on Payjoin/P2EP in light
-of BTCPay Server recently implementing support for Payjoin/P2EP
+- **Payjoin/P2EP:** Adam Gibson led a discussion at London BitDevs on payjoin in light
+of BTCPay Server recently implementing support for payjoin
 transactions. These transactions allow both the sender and receiver of
 the payment to coordinate to bolster their privacy by inserting
 additional inputs and outputs to break the common wallet ownership
 assumption and subset sum analysis. Gibson went through the history of
-the concept, existing implementations of Payjoin/P2EP in Joinmarket and
+the concept, existing implementations of payjoin in JoinMarket and
 Samourai before moving on to details of the recent BTCPay Server
 implementation. He ended by outlining the different ways a wallet can be
 fingerprinted including the threshold of signatures required, how
-timelocks are imposed and the RBF (replace-by-fee) flag.
+timelocks are imposed, and the Replace-By-Fee (RBF) flag.
 ([transcript][gibson xs], [video][gibson vid])
 
-- **LSAT—-Your Ticket Aboard The Lightning Native Web:** Oliver Gugger presented on LSAT (Lightning Service Authentication Token)
+- **LSAT—-Your Ticket Aboard The Lightning Native Web:** Oliver Gugger presented on Lightning Service Authentication Token (LSAT)
 at Reckless VR in virtual reality. LSAT is a protocol specification and
-proposed new standard combining HTTP, macaroons and Lightning. It is
+proposed new standard combining HTTP, macaroons, and Lightning. It is
 designed to address the HTTP 402 Payment Required error status response
 code. Gugger described the authentication flow and the role of macaroons
 as pseudonymous user identification. The question and answer session
@@ -135,29 +135,29 @@ user privacy and improved sign up experience.
 ([transcript](https://diyhpl.us/wiki/transcripts/vr-bitcoin/2020-05-16-oliver-gugger-lsat/),
 [video](https://www.youtube.com/watch?v=IW08RJUpzw0))
 
-- **Sydney meetup discussion:** A number of Bitcoin developers and Lightning developers joined this
+- **Sydney meetup discussion:** A number of Bitcoin developers and LN developers joined this
 Sydney meetup to discuss various topics. The agenda items included the
-scalability issues of onboarding millions of Lightning clients, Rust
-code integration into Bitcoin Core, dual funding in c-lightning and
+scalability issues of onboarding millions of LN clients, Rust
+code integration into Bitcoin Core, dual funding in C-Lightning, and
 modern soft fork activation. The history of Linux kernel development and
-SegWit activation was explored to garner insights into when or whether
+segwit activation was explored to garner insights into when or whether
 the Rust language should be introduced to Bitcoin Core and the exact
 mechanism that should be used to activate proposed soft forks such as
-BIP-Taproot in future. The transcript was anonymized to encourage an
+bip-taproot in future. The transcript was anonymized to encourage an
 open and honest discussion.
 ([transcript][sydney xs])
 
 - **Revault—A Multiparty Vault Architecture:** Kevin Loaec and Antoine Poinsot presented on their vault design Revault
 at London Bitcoin Devs. They outlined specific details like its reliance
 on co-signing servers and how it compares to some other vault designs
-that require knowledge of amounts ahead of time and/or key deletion.
+that require knowledge of amounts ahead of time, key deletion, or both.
 Their presentation was preceded the week before by a wider discussion on
-vaults, covenants and OP_CHECKTEMPLATEVERIFY (OP_CTV). This included the
-merits of the different use cases of OP_CTV, a possible path to being
-merged into Bitcoin Core and how the current state of the mempool of
+vaults, covenants, and `OP_CHECKTEMPLATEVERIFY` (`OP_CTV`). This included the
+merits of the different use cases of `OP_CTV`, a possible path to being
+merged into Bitcoin Core, and how the current state of the mempool of
 Bitcoin Core makes resolving problems like transaction pinning so
 challenging. Transaction pinning and watchtower designs are highly
-relevant to the security of both vault designs and the Lightning
+relevant to the security of both vault designs and the LN
 protocol.  ([Meetup
 transcript][london xs],
 [Presentation

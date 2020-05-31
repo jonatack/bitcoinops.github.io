@@ -100,9 +100,7 @@ publication of Newsletter #100.
 Bitcoin presentations and discussions. In this monthly feature, we
 highlight a selection of the transcripts from the previous month.*
 
-**Back the f\*\*\* up**
-
-Christian Decker presented at Potzblitz on the latest state of Lightning
+- **Back the f\*\*\* up:** Christian Decker presented at Potzblitz on the latest state of Lightning
 backups. He discussed the approaches of other implementations such as
 eclair and lnd before explaining why c-lightning is using a synchronous
 database log plugin approach to facilitate Lightning node backups. In
@@ -114,9 +112,7 @@ Lightning protocol.
 ([transcript](https://diyhpl.us/wiki/transcripts/lightning-hack-day/2020-05-03-christian-decker-lightning-backups/),
 [video](https://www.youtube.com/watch?v=kGQF3wtzr04))
 
-**Payjoin/P2EP**
-
-Adam Gibson led a discussion at London BitDevs on Payjoin/P2EP in light
+- **Payjoin/P2EP:** Adam Gibson led a discussion at London BitDevs on Payjoin/P2EP in light
 of BTCPay Server recently implementing support for Payjoin/P2EP
 transactions. These transactions allow both the sender and receiver of
 the payment to coordinate to bolster their privacy by inserting
@@ -130,9 +126,7 @@ timelocks are imposed and the RBF (replace-by-fee) flag.
 ([transcript](https://diyhpl.us/wiki/transcripts/london-bitcoin-devs/2020-05-05-socratic-seminar-payjoins/),
 [video](https://www.youtube.com/watch?v=hX86rKyNB8I))
 
-**LSAT—-Your Ticket Aboard The Lightning Native Web**
-
-Oliver Gugger presented on LSAT (Lightning Service Authentication Token)
+- **LSAT—-Your Ticket Aboard The Lightning Native Web:** Oliver Gugger presented on LSAT (Lightning Service Authentication Token)
 at Reckless VR in virtual reality. LSAT is a protocol specification and
 proposed new standard combining HTTP, macaroons and Lightning. It is
 designed to address the HTTP 402 Payment Required error status response
@@ -143,9 +137,7 @@ user privacy and improved sign up experience.
 ([transcript](https://diyhpl.us/wiki/transcripts/vr-bitcoin/2020-05-16-oliver-gugger-lsat/),
 [video](https://www.youtube.com/watch?v=IW08RJUpzw0))
 
- **Sydney meetup discussion**
-
-A number of Bitcoin developers and Lightning developers joined this
+- **Sydney meetup discussion:** A number of Bitcoin developers and Lightning developers joined this
 Sydney meetup to discuss various topics. The agenda items included the
 scalability issues of onboarding millions of Lightning clients, Rust
 code integration into Bitcoin Core, dual funding in c-lightning and
@@ -157,9 +149,7 @@ BIP-Taproot in future. The transcript was anonymized to encourage an
 open and honest discussion.
 ([transcript](https://diyhpl.us/wiki/transcripts/sydney-bitcoin-meetup/2020-05-19-socratic-seminar/))
 
- **Revault—A Multiparty Vault Architecture**
-
-Kevin Loaec and Antoine Poinsot presented on their vault design Revault
+- **Revault—A Multiparty Vault Architecture:** Kevin Loaec and Antoine Poinsot presented on their vault design Revault
 at London Bitcoin Devs. They outlined specific details like its reliance
 on co-signing servers and how it compares to some other vault designs
 that require knowledge of amounts ahead of time and/or key deletion.

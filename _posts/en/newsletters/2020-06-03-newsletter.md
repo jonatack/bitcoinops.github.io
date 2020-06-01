@@ -41,17 +41,6 @@ publication of Newsletter #100.
     of the backend requirements for the system.  Additionally,
     he compares coinswap to other privacy techniques such as using LN,
     [coinjoin][topic coinjoin], payjoin, and [payswap][zmn payswap].
-    Near the end of his email, Belcher summarizes the requirements for
-    the system he describes:
-
-    > * [Two-party ECDSA]
-    > * Liquidity market
-    > * Routed CoinSwaps
-    > * Multi-transaction CoinSwaps
-    > * Breaking change output heuristics
-    > * Fidelity bonds
-    > * PayJoin with CoinSwap
-    > * Federated message boards protected from spam with fidelity bonds
 
     Belcher has a history of creating and maintaining privacy-enhancing
     open source software for Bitcoin, such as [JoinMarket][] and
@@ -190,7 +179,7 @@ version 0.20.*
 
 - [Bitcoin Core #19010][] net processing: Add support for getcfheaders FIXME:jonatack
 
-- [Bitcoin Core #16030][] changes how long Bitcoin Core waits until
+- [Bitcoin Core #16939][] changes how long Bitcoin Core waits until
   it queries DNS seeds for the IP addresses of potential peers.
   Previously, if the node had peer IP addresses in its database, it
   would try opening several connections and wait 11 seconds for
@@ -253,7 +242,7 @@ and [SquareCrypto][] who both allow and encourage their staff to use
 their work hours to contribute to Optech.
 
 {% include references.md %}
-{% include linkers/issues.md issues="19010,16030,4228" %}
+{% include linkers/issues.md issues="19010,16939,4228" %}
 [bitcoin core 0.20.0]: https://bitcoincore.org/bin/bitcoin-core-0.20.0
 [lnd 0.10.1-beta.rc3]: https://github.com/lightningnetwork/lnd/releases/tag/v0.10.1-beta.rc3
 [bishop summaries]: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-August/010488.html

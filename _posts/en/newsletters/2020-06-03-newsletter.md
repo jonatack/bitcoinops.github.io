@@ -111,11 +111,11 @@ highlight a selection of the transcripts from the previous month.*
   ([transcript][decker xs], [video][decker vid])
 
 - **Payjoin/P2EP:** Adam Gibson led a discussion at London BitDevs about
-  [payjoin][topic payjoin], including the recent implementation of it by
-  BTCPay Server.  Payjoin allows the sender and receiver of a
-  payment to coordinate in order to increase their privacy by allowing both of them to contribute
-  inputs to the transaction, breaking the [common wallet ownership
-  assumption][] and subset sum analysis. Gibson went through the history
+  [payjoin][topic payjoin], a protocol that allows both the sender and
+  receiver of a payment to contribute inputs to the transaction.  This
+  breaks the [common wallet ownership assumption][] and subset sum
+  analysis, improving the privacy of both the sender and the receiver.
+  Gibson went through the history
   of the concept and described the existing implementations of payjoin
   in JoinMarket and Samourai before examining details of the recent
   BTCPay Server implementation. He ended by outlining several different

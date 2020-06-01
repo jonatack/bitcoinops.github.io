@@ -9,7 +9,7 @@ lang: en
 ---
 This week's newsletter summarizes a proposed design for a coinswap
 implementation, describes new middleware for allowing lightweight
-wallets to get information directly from a user's own node, and links to
+wallets to request information directly from a user's own node, and links to
 two transaction size calculators.  Also included are our regular
 sections with descriptions of several recently transcribed talks, new
 releases and release candidates, and notable changes to popular Bitcoin
@@ -25,7 +25,7 @@ publication of Newsletter #100.
 - **Design for a coinswap implementation:** Chris Belcher
   [posted][belcher coinswap] a design for a full-featured coinswap
   implementation.  Coinswap is a protocol that allows two users to
-  create a pair of transaction that look like regular payments but which
+  create a pair of transactions that look like regular payments but which
   actually swap their coins with each other.  This improves the privacy
   of not just the coinswap users but all Bitcoin users, as anything that
   looks like a payment could have instead been a coinswap.
@@ -39,7 +39,7 @@ publication of Newsletter #100.
     as succinct atomic swaps (see [Newsletter #98][news98 sas]), suggests
     combining coinswap with [payjoin][topic payjoin], and discusses some
     of the backend requirements for the system.  Additionally,
-    comparisons are made to other privacy techniques such as using LN,
+    he compares coinswap to other privacy techniques such as using LN,
     [coinjoin][topic coinjoin], payjoin, and [payswap][zmn payswap].
     Near the end of his email, Belcher summarizes the requirements for
     the system he describes:
@@ -53,7 +53,7 @@ publication of Newsletter #100.
     > * PayJoin with CoinSwap
     > * Federated message boards protected from spam with fidelity bonds
 
-    Belcher has a history of creating and maintaining privacy enhancing
+    Belcher has a history of creating and maintaining privacy-enhancing
     open source software for Bitcoin, such as [JoinMarket][] and
     [Electrum Personal Server][eps], which gives particular weight to
     the conclusion of his email: "I intend to create this CoinSwap
@@ -225,7 +225,7 @@ convinced that writing weekly summaries of research and development
 activity is a task that's valuable to both the open source Bitcoin
 development community and to the many businesses that depend upon the
 community's work.  But in the two years we've been producing this
-newsleter, we've also discovered that summarizing isn't quite as quick
+newsletter, we've also discovered that summarizing isn't quite as quick
 and simple as we initially expected it to be.  Accordingly, we'd like to
 take this chance to thank the people who make this newsletter possible
 by generously contributing a significant amount of their valuable time
